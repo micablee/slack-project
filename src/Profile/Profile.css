@@ -1,0 +1,225 @@
+.profile-container {
+    display: flex;
+    flex: 0.4;
+    flex-direction: column;
+    background-color: #301f30; /* Dark purple */
+    border: 1px solid rgba(128, 128, 128, 0.253);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 530px;
+    padding: 10px;
+  }
+  
+  .profile-initials {
+    margin-bottom: 15px;
+  }
+  
+  .search-conversation-bar {
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    background-color: #42233D; /* Medium dark purple */
+    border-radius: 0px 15px 15px 0px;
+    border-left: transparent;
+    font-size: 16px;
+    outline: none; /* Prevents default focus outline */
+    color: #ffffff; /* White text */
+  }
+  
+  .magnifying-glass {
+    font-size: 40px;
+    background-color: #42233D; /* Medium dark purple */
+    padding: 10px;
+    border-radius: 15px 0px 0px 15px;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    border-right: transparent;
+    color: #ffffff; /* White icon */
+  }
+  
+  .search-bar-with-icon {
+    display: flex;
+    margin-right: 15px;
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+  
+  .profile-name, .group-name-profile {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text */
+  }
+  
+  .initials-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #522A48; /* Dark purple */
+    color: #ffffff; /* White text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem; /* Adjust font size */
+    font-weight: bold;
+    margin: 10px auto; /* Center the circle */
+    text-transform: uppercase; /* Ensure uppercase */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+  }
+  
+  .email-icon, .phone-icon {
+    vertical-align: middle;
+    color: #522A48; /* Dark purple */
+    margin-right: 5px;
+  }
+  
+  .group-icon {
+    vertical-align: middle;
+    color: #522A48; /* Dark purple */
+    text-align: center;
+    font-size: 120px;
+  }
+  
+  .email-name, .phone-name {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 7px;
+    color: #ffffff; /* White text */
+  }
+  
+  .press-enter-caption, .no-msg-match {
+    text-align: center;
+    font-size: 12px;
+    margin: 5px 0; /* Reduce margin to prevent overflow */
+    padding: 0; /* Ensure no extra padding */
+    overflow: hidden; /* Prevent content overflow */
+    white-space: nowrap; /* Prevent text wrapping */
+    color: #ffffff; /* White text */
+  }
+  
+  .filtered-messages {
+    overflow-y: auto; /* Only allow vertical scroll for actual messages */
+    max-height: 100%; /* Ensure it fits within its parent container */
+    padding: 10px;
+    margin: 0; /* Prevent extra margins that could push the content */
+    box-sizing: border-box; /* Include padding and border in height/width calculations */
+  }
+  
+  .filtered-message.receiver {
+    font-size: 14px;
+    background-color: #e7f9d1;
+    color: #004d00;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    padding: 10px;
+  }
+  
+  .filtered-message.sender {
+    font-size: 14px;
+    background-color: #d1e7fd;
+    color: #003366;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    padding: 10px;
+  }
+  
+  .chat-members-header {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: #ffffff; /* White text */
+  }
+  
+  .memberList-container {
+    max-height: 200px; /* Set a maximum height for scrollable content */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 8px;
+    background-color: #42233D; /* Medium dark purple */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .memberList-individual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #301f30; /* Dark purple */
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .memberList-individual:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+  
+  .memberList-email-id-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Add spacing between email and ID */
+    font-size: 14px;
+    color: #ffffff; /* White text */
+  }
+  
+  .memberList-email-id-container p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .memberList-email-id-container p svg {
+    margin-right: 8px; /* Add spacing between the icon and text */
+    color: #522A48; /* Dark purple */
+  }
+  
+  .memberList-email-id-container p:first-child {
+    font-size: 14px;
+  }
+  
+  .memberList-email-id-container p:last-child {
+    color: #ffffff; /* White text */
+  }
+  
+  /* Styles for WebKit-based browsers (Chrome, Edge, Safari) */
+  .filtered-messages::-webkit-scrollbar {
+    width: 8px; /* Make the scrollbar narrow */
+  }
+  
+  .filtered-messages::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.6); /* Dark gray for the thumb */
+    border-radius: 10px; /* Rounded edges for the thumb */
+  }
+  
+  .filtered-messages::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(128, 128, 128, 0.8); /* Slightly darker on hover */
+  }
+  
+  .filtered-messages::-webkit-scrollbar-track {
+    background-color: rgba(240, 240, 240, 0.9); /* Light gray for the track */
+    border-radius: 10px;
+  }
+  
+  /* Firefox specific scrollbar styles */
+  .filtered-messages {
+    scrollbar-width: thin; /* Make the scrollbar thin */
+    scrollbar-color: rgba(128, 128, 128, 0.6) rgba(240, 240, 240, 0.9); /* Thumb and track colors */
+  }
+  
+  /* General container to ensure consistent styling */
+  .filtered-messages {
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 300px; /* Adjust height as needed */
+    border: 1px solid rgba(128, 128, 128, 0.2); /* Optional: Add a border for distinction */
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding and border fit within dimensions */
+  }
+  

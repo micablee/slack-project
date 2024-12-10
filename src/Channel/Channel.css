@@ -1,0 +1,176 @@
+ /* General Channel Bar Styling */
+ .channel-bar {
+    background-color: #301f30; /* Darker shade for the background */
+    color: #ffffff; /* White text for contrast */
+    margin-left: 0;
+    border: none; /* Remove border for a clean look */
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 530px;
+  }
+  
+  /* Channel Headers */
+  .channel-header,
+  .dm-header {
+    color: #FFFFFF; /* White for text contrast */
+    padding: 8px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle divider */
+  }
+  
+  /* Create Group Button */
+  .create-group-button {
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    background-color: #42233D; /* Slightly lighter than #2D142C for button */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .create-group-button:hover {
+    background-color: #522A48; /* Slightly brighter on hover */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Channel List */
+  .channel-list-container {
+    margin: 10px 0 15px;
+    padding: 8px;
+    list-style: none;
+    overflow-y: scroll;
+    background-color: #3A1B34; /* Complementary dark background */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+  }
+  
+  .group-list {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #4A2640; /* Highlighted dark color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .group-list:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #5A2F4A; /* Slightly brighter on hover */
+  }
+  
+  /* Group Links */
+  .group-name {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .group-name:hover {
+    text-decoration: underline;
+  }
+  
+  /* User List */
+  .userList-container {
+    height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 10px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    background-color: #3A1B34;
+  }
+  
+  .userList-individual {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #4A2640;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .userList-individual:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #5A2F4A;
+  }
+  
+  .userList-individual p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  /* Modal Styling */
+  .modal-content {
+    background: #2D142C; /* Dark background for modal */
+    color: #ffffff; /* White text */
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  .modal-content h3, .modal-content h4 {
+    color: #ffffff; /* Ensure headers are visible */
+  }
+  
+  .enter-channel-name {
+    outline: none;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #42233D;
+    color: #ffffff;
+  }
+  
+  .create-button, .cancel-button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    width: 45%;
+  }
+  
+  .create-button {
+    background-color: #5A2F4A; /* Button color for modal */
+    color: #ffffff;
+    margin-right: 5px;
+  }
+  
+  .create-button:hover {
+    background-color: #6A3755; /* Brighter on hover */
+  }
+  
+  .cancel-button {
+    background-color: #4A2640;
+    color: #ffffff;
+  }
+  
+  .cancel-button:hover {
+    background-color: #5A2F4A;
+  }
+  

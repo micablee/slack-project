@@ -6,17 +6,19 @@ const DataContext = createContext();
 
 const DataProvider = ({children}) => {
     const [ userHeaders, setUserHeaders ] = useState('')
-
+    
     const handleHeaders = (header) => {
         const updatedHeader = {
             'access-token': header['access-token'],
             uid: header.uid,
             expiry: header.expiry,
-            client: header.client,
+            client: header.client
         }
+        
         setUserHeaders(updatedHeader)
     }
-    
+  
+
     return (
         <DataContext.Provider value={
             {
@@ -35,4 +37,4 @@ export const useData = () => {
     return useContext(DataContext);
 }
 
-export default DataProvider;
+export default DataProvider; // main component

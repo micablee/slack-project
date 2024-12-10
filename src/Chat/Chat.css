@@ -1,0 +1,112 @@
+.group-window {
+    flex: 0.7;
+    flex-direction: column; 
+    background-color: #301f30; /* Dark background */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    height: 530px; 
+  }
+  
+  .receiver-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #42233D; /* Slightly lighter for contrast */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .group-window > h3 {
+    padding-bottom: 10px;
+    margin: 10px;
+    color: #ffffff; /* White for text contrast */
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .messages {
+    flex: 1; 
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    overflow-y: auto; 
+    background-color: #3A1B34; /* Consistent with container background */
+  }
+  
+  .message {
+    max-width: 60%; 
+    padding: 10px;
+    border-radius: 12px;
+    word-wrap: break-word; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message.sender {
+    background-color: #5A2F4A; /* Use hover color for consistency */
+    color: #ffffff; /* White text */
+    align-self: flex-end; 
+    border-top-right-radius: 0; 
+  }
+  
+  .message.receiver {
+    background-color: #4A2640; 
+    color: #ffffff; /* White text */
+    align-self: flex-start; 
+    border-top-left-radius: 0; 
+  }
+  
+  .chat-input {
+    width: 85%;
+    height: 40px;
+    margin: 10px 5px;
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #42233D; /* Matches input fields */
+    color: #ffffff; /* White text */
+    box-sizing: border-box;
+  }
+  
+  .send-btn {
+    background-color: #5A2F4A;
+    color: #ffffff; /* White text */
+    border: none;
+    height: 40px;
+    padding: 0 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+  }
+  
+  .send-btn:hover {
+    background-color: #6A3755; /* Brighter hover color */
+  }
+  
+  .user-list {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #3A1B34; /* Dark complementary color */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+  }
+  
+  .user-list label {
+    display: block;
+    margin: 5px 8px;
+    font-size: 14px;
+    color: #ffffff; /* White text */
+  }
+  

@@ -11,39 +11,34 @@ function Profile({ receiver, setReceiver, channel, setChannel, userList, channel
   console.log('Profile Props, channelDetails:', channelDetails)
   console.log('Profile Props, receiver:', receiver)
 
-  // Generate initials for receiver
   const initials = receiver?.email
     ? receiver.email
-        .split("@")[0] // Get part before @
-        .split(".") // Split by dots if multiple parts (e.g., john.doe)
-        .map((part) => part.charAt(0).toUpperCase()) // Get the first letter of each part
-        .join("") // Join them together (e.g., JD)
+        .split("@")[0] 
+        .split(".") 
+        .map((part) => part.charAt(0).toUpperCase()) 
+        .join("") 
     : null;
 
   useEffect(() => {
     setIsTyping(false);
     setChannelMembers([]);
-  }, [receiver, channel]); // Runs when the receiver or channel changes
+  }, [receiver, channel]); 
 
-  // Function to get the email of a member based on the user_id match
   const getMemberEmail = () => {
-    // Iterate over the channelMembers array
     for (let member of channelMembers) {
-      // Find the user in userList where the IDs match
       const user = userList.find((user) => user.id === member.user_id);
       if (user) {
-        setMemberEmail(user.email); // Set the member email if a match is found
-        return; // Exit the function once the match is found
+        setMemberEmail(user.email); 
+        return; 
       }
     }
-    // If no match is found, set memberEmail to an empty string or handle as needed
     setMemberEmail('');
   };
 
   const handleChannelMemberClick = (user) => {
-    setReceiver(user) // Update the receiver for direct messaging
+    setReceiver(user)
     setChannel(null)
-    console.log('Receiver set to:', user); // Debug log
+    console.log('Receiver set to:', user); 
   };
 
   useEffect(() => {
@@ -57,7 +52,6 @@ function Profile({ receiver, setReceiver, channel, setChannel, userList, channel
         {receiver && (
           <>
             <div className="profile-initials">
-              {/* Display initials in a styled circle */}
               {initials ? (
                 <div className="initials-circle">{initials}</div>
               ) : (
@@ -100,7 +94,6 @@ function Profile({ receiver, setReceiver, channel, setChannel, userList, channel
         {channel && (
           <>
             <div className="profile-initials">
-              {/* Display initials in a styled circle */}
               {initials ? (
                 <div className="initials-circle">{initials}</div>
               ) : (
@@ -126,8 +119,7 @@ function Profile({ receiver, setReceiver, channel, setChannel, userList, channel
                 <p className="chat-members-header">Chat members:</p>
                 <div className="memberList-container">
                   {channelMembers.map((channelIndividual) => {
-                    const { user_id } = channelIndividual; // Extract user_id
-                    // Find the corresponding user in userList
+                    const { user_id } = channelIndividual; 
                     const user = userList.find((u) => u.id === user_id);
                     return (
                       <div key={channelIndividual.id} className="memberList-individual">

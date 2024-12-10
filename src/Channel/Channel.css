@@ -1,48 +1,47 @@
-/* General Channel Bar Styling */
 .channel-bar {
-    background-color: #301f30; /* Darker shade for the background */
-    color: #ffffff; /* White text for contrast */
+    background-color: #301f30; 
+    color: #ffffff; 
     margin-left: 0;
-    border: none; /* Remove border for a clean look */
-    width: 300px; /* Set a fixed width for the channel bar */
-    height: 100vh; /* Make it take full viewport height */
+    border: none; 
+    width: 300px; 
+    height: 100vh; 
     display: flex;
-    flex-direction: column; /* Vertical stacking */
+    flex-direction: column; 
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  /* Channel List */
+  
   .channel-list-container,
   .dm-list-container {
-    flex: 1; /* Take equal height space */
-    margin: 10px 0; /* Margin for spacing between sections */
+    flex: 1; 
+    margin: 10px 0; 
     padding: 8px;
     list-style: none;
     overflow-y: scroll;
-    background-color: #3A1B34; /* Complementary dark background */
+    background-color: #3A1B34; 
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
   }
   
-  /* Channel Headers */
+ 
   .channel-header,
   .dm-header {
-    color: #FFFFFF; /* White for text contrast */
+    color: #FFFFFF; 
     padding: 8px;
     margin: 0;
     font-size: 16px;
     font-weight: bold;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle divider */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
   }
   
-  /* Create Group Button */
+  
   .create-group-button {
     margin-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
     padding: 8px;
-    background-color: #42233D; /* Slightly lighter than #2D142C for button */
+    background-color: #42233D; 
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -53,17 +52,16 @@
   }
   
   .create-group-button:hover {
-    background-color: #522A48; /* Slightly brighter on hover */
+    background-color: #522A48; 
     transition: background-color 0.3s ease;
   }
   
-  /* Group List */
   .group-list {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
     padding: 8px;
     margin-bottom: 8px;
-    background-color: #4A2640; /* Highlighted dark color */
+    background-color: #4A2640; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
     cursor: pointer;
@@ -76,10 +74,9 @@
     cursor: pointer;
     transform: scale(1.02);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #5A2F4A; /* Slightly brighter on hover */
+    background-color: #5A2F4A; 
   }
   
-  /* Group Links */
   .group-name {
     color: #ffffff;
     text-decoration: none;
@@ -89,7 +86,6 @@
     text-decoration: underline;
   }
   
-  /* User List */
   .userList-container {
     height: 50vh;
     overflow-y: auto;

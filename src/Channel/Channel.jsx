@@ -72,7 +72,7 @@ function Channel(
   }, [channel])
 // holder of channel 
   const handleChannel = (id, name) => {
-    setChannel( { id, name  }); // Store both id and name
+    setChannel( { id, name  }); 
     setReceiver(null);
   };
   
@@ -80,8 +80,7 @@ function Channel(
 const handleCreateChannel = async (e) => {
   e.preventDefault();
 
-  // Enhanced validation for the channel name
-  const nameRegex = /^[a-zA-Z0-9-_ ]{3,30}$/; // Example: Alphanumeric, dashes, underscores, spaces, 3-30 characters
+  const nameRegex = /^[a-zA-Z0-9-_ ]{3,30}$/; 
   if (!newChannelName.trim()) {
     return alert("Channel name cannot be empty.");
   }
@@ -109,14 +108,13 @@ const handleCreateChannel = async (e) => {
   }
 };
 
-  // function to cancel creating a new channel
   const handleCancel = () => {
     setIsModalOpen(false);
     setSelectedUsers("");
     setNewChannelName("");
   };
 
-// function to get DETAILS of a channel
+
   const getChannelDetails = async () => {
     try {
       const response = await axios.get(`${API_URL}/channels/${channel.id}`, { headers: userHeaders });
@@ -134,7 +132,7 @@ const handleCreateChannel = async (e) => {
     if (channel?.id) {
       getChannelDetails();
     }
-  }, [channel, channelMembers]); // Add channel.id and channelMembers as dependencies
+  }, [channel, channelMembers]); 
   
 
  
@@ -191,7 +189,7 @@ const handleCreateChannel = async (e) => {
           </ul>
     </div>
 
-      {/* Modal for Channel Creation */}
+      
       {isModalOpen && (
         <div className="modal">
           <div className="modal-content">
@@ -221,7 +219,7 @@ const handleCreateChannel = async (e) => {
                       );
                     }}
                   />
-                    {user.email} {/* Display user's name or email */}
+                    {user.email} 
                 </label>
                   ))}
             </div>

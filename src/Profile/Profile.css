@@ -1,7 +1,7 @@
 .profile-container {
-    width: 300px; /* Keep the profile container at a fixed width */
-    background-color: #301f30; /* Dark background for the profile */
-    color: #ffffff; /* White text color */
+    width: 300px; 
+    background-color: #301f30; 
+    color: #ffffff; 
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 20px;
-    height: 100%; /* Ensure it stretches vertically */
+    height: 100%; 
 }
 
 .profile-header {
@@ -17,27 +17,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center; /* Center-align the content */
+    text-align: center; 
 }
 
 .profile-header h2 {
-    color: #ffffff;  /* White color for text */
-    font-size: 28px;  /* Increase the size of the name to make it stand out */
-    font-weight: bold; /* Make the name bold */
+    color: #ffffff;  
+    font-size: 28px;  
+    font-weight: bold; 
     margin: 0;
-    text-transform: uppercase; /* Optional: capitalize the name */
-    letter-spacing: 1px; /* Optional: add some spacing between letters */
-    border-bottom: 2px solid #5A2F4A; /* Add a bottom border to make it more distinct */
-    padding-bottom: 5px; /* Space between name and border */
-    background-color: #42233D; /* Slightly darker background for the name */
-    padding: 12px 0; /* Padding around the name to make it look spacious */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    border-bottom: 2px solid #5A2F4A; 
+    padding-bottom: 5px; 
+    background-color: #42233D; 
+    padding: 12px 0; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .profile-header h2:hover {
-    color: #5A2F4A; /* Change color on hover */
-    cursor: pointer; /* Show a pointer cursor */
+    color: #5A2F4A; 
+    cursor: pointer; 
 }
 
 .profile-header .avatar-wrapper {
@@ -53,10 +53,10 @@
     width: 50px;
     height: 50px;
     object-fit: cover;
-    border: 3px solid #5A2F4A; /* Border for avatar */
+    border: 3px solid #5A2F4A; 
 }
 
-/* Styling for the profile details section */
+
 .profile-details {
     display: flex;
     flex-direction: column;
@@ -65,7 +65,7 @@
 
 .profile-details .profile-item {
     font-size: 14px;
-    color: #ccc; /* Light gray for profile items */
+    color: #ccc; 
     display: flex;
     justify-content: space-between;
     padding: 8px;
@@ -76,7 +76,7 @@
     font-weight: bold;
 }
 
-/* Styling for the profile buttons */
+
 .profile-buttons {
     display: flex;
     flex-direction: column;
@@ -96,17 +96,15 @@
 }
 
 .profile-buttons button:hover {
-    background-color: #6A3755; /* Hover color */
+    background-color: #6A3755; 
 }
 
-/* Optional: Add space between profile details and buttons */
 .profile-buttons {
     margin-top: 20px;
 }
 
-/* For responsiveness, ensure the profile remains fixed width across different screen sizes */
 @media (max-width: 768px) {
     .profile-container {
-        width: 250px; /* Slightly narrower on small screens */
+        width: 250px; 
     }
 }

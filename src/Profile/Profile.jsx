@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import '../Profile/Profile.css'
-
+import { MdEmail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import { RiGroup2Fill } from "react-icons/ri";
 
 function Profile({ receiver, setReceiver, channel, setChannel, userList, channelDetails, channelMembers, setChannelMembers }) {
   const [isTyping, setIsTyping] = useState(false);
@@ -73,7 +75,7 @@ function Profile({ receiver, setReceiver, channel, setChannel, userList, channel
 
             <p className="email-name">
               <span className="email-icon">
-              
+                <MdEmail />
               </span>
               {channel?.name
                 ? `#${channel.name}`
@@ -84,7 +86,7 @@ function Profile({ receiver, setReceiver, channel, setChannel, userList, channel
 
             <p className="phone-name">
               <span className="phone-icon">
-              
+                <FaPhoneAlt />
               </span>
               {channel?.name
                 ? `#${channel.name}`
@@ -108,7 +110,7 @@ function Profile({ receiver, setReceiver, channel, setChannel, userList, channel
 
             <p className="phone-name">
               <div className="group-icon">
-               
+                <RiGroup2Fill />
               </div>
               <div className="group-name-profile">
                 {channel?.name
@@ -133,7 +135,8 @@ function Profile({ receiver, setReceiver, channel, setChannel, userList, channel
                           className="memberList-email-id-container"
                           onClick={() => handleChannelMemberClick(user)}
                         >
-                         
+                          <p><MdEmail /> {user ? `${user.email}` : "Email not found"}</p>
+                          <p><FaPhoneAlt />{`${user_id}`} </p>
                         </div>
                       </div>
                     );
